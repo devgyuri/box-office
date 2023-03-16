@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/6b53e39096.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
+    <title>201924105 김규리</title>
+  </head>
+
+  <body>
+    <!-- 배너 -->
+    <header class="banner">
+      <span class="logo">
+        <i class="fas fa-cubes"></i>
+      </span>
+      <span class="logo_text">Box</span>
+      <span class="logo_text">Office</span>
+    </header>
+
+    <!-- 검색창과 메인 텍스트 -->
+    <section class="top">
+      <div class="main">
+        <div class="title">
+          박스오피스 조회
+        </div>
+        <div class="description">
+          일일 박스오피스를 검색해보세요
+        </div>
+        <!-- 검색창 -->
+        <div class="searcher">
+          <!-- 날짜 입력창 -->
+          <div class="dClass" id="datebox">
+            <!-- 2010-01-01 이후 날짜만 입력 가능 -->
+            <input type="date" class="dClass" id="date" value="2019-07-18" min="2010-01-01">
+          </div>
+          <!-- 검색 버튼 -->
+          <div class="sClass" id="searchbox">
+            <button class="sClass" id="search">검색</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 검색 결과 -->
+    <section class="result">
+      <div id="mainList">
+        <!-- 검색한 날짜 -->
+        <div id="dateInfo">
+        </div>
+        <!-- Box Office 순위 -->
+        <div id="list">
+        </div>
+      </div>
+      <!-- 영화 정보 및 예고편-->
+      <div id="info">
+        <!-- 영화 정보 -->
+        <div id="metainfo">
+          <span id="test"></span>
+          <input type="text" name="mvTitle" id="mvTitle" disabled>
+          <input type="text" name="mvEngDt" id="mvEngDt" disabled>
+          <div class="rating">
+            <label for="mvRating">상영등급</label>
+            <input type="text" name="mvRating" id="mvRating" disabled>
+          </div>
+          <div class="genre">
+            <label for="mvGenre">장르</label>
+            <input type="text" name="mvGenre" id="mvGenre" disabled>
+          </div>
+          <div class="company">
+            <label for="mvCompany">제작사</label>
+            <input type="text" name="mvCompany" id="mvCompany" disabled>
+          </div>
+          <div class="director">
+            <label for="mvDirector">감독</label>
+            <input type="text" name="mvDirector" id="mvDirector" disabled>
+          </div>
+          <div class="actor">
+            <label for="mvActor">출연</label>
+            <input type="text" name="mvActor" id="mvActor" disabled>
+          </div>
+          <!-- 부가적인 영화 정보 출력 버튼 -->
+          <button id="summary" onclick="openSummary()">줄거리</button>
+          <button id="poster" onclick="openPoster()">포스터</button>
+          <button id="more" onclick="openSite()">더보기</button>
+        </div>
+        <!-- 유튜브 재생창 -->
+        <div id="video">
+          <!-- 유튜브 재생목록 요청하기 전에는 유튜브 로고 이미지 표시 -->
+          <img src="image\youtube.png" alt="유튜브">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Copyright &copy; 2020 김규리
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
